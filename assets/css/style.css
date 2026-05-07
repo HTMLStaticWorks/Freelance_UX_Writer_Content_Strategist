@@ -29,6 +29,10 @@
     background-color: var(--primary) !important;
 }
 
+.bg-accent {
+    background-color: var(--accent) !important;
+}
+
 [data-theme="dark"] {
     --primary: #14B8A6;
     /* Bright Teal for accents in dark mode */
@@ -240,9 +244,9 @@ a {
     pointer-events: none;
 }
 
-/* Hide Login button from headers globally */
+/* Ensure Login button is visible in headers */
 .navbar a[href="login.html"] {
-    display: none !important;
+    display: inline-flex !important;
 }
 
 .glass-card {
@@ -330,6 +334,18 @@ a {
     transform: translateY(-2px);
 }
 
+.btn-accent {
+    background-color: var(--accent) !important;
+    color: white !important;
+    border: none !important;
+    transition: var(--transition);
+}
+
+.btn-accent:hover {
+    background-color: #4f46e5 !important;
+    transform: translateY(-2px);
+}
+
 .hero-section .btn-premium {
     min-width: 200px;
 }
@@ -354,9 +370,50 @@ a {
 }
 
 @media (max-width: 991.98px) {
+    .offcanvas {
+        height: 100vh !important;
+        background-color: var(--secondary) !important;
+    }
+    
+    .offcanvas-end {
+        width: 100% !important;
+        max-width: 350px;
+        border-left: 1px solid var(--glass-border);
+    }
+
     .offcanvas-body {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        padding: 40px 20px;
+        text-align: center;
+    }
+    
+    .navbar-nav {
+        width: 100%;
+    }
+    
+    .nav-item {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .nav-link {
+        font-size: 1.2rem !important;
+        padding: 15px !important;
+        margin: 0 !important;
+        display: block;
+    }
+
+    .offcanvas-header {
+        padding: 20px;
+        border-bottom: 1px solid var(--glass-border);
+    }
+}
+
+@media (max-width: 360px) {
+    .offcanvas-end {
+        width: 100% !important;
+        max-width: 100%;
     }
 }
 
@@ -598,9 +655,12 @@ a {
     transition: var(--transition);
     height: 100vh;
     position: fixed;
-    z-index: 1000;
+    top: 0;
+    left: 0;
+    z-index: 2000;
     color: var(--text-main);
     box-shadow: 10px 0 30px rgba(0, 0, 0, 0.02);
+    overflow-y: auto;
 }
 
 .sidebar .nav-link {
@@ -743,6 +803,19 @@ a {
     .dashboard-header {
         margin: -20px -20px 20px;
         padding: 15px 20px;
+    }
+
+    /* Mobile Sidebar Backdrop */
+    .sidebar.active::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,0.2);
+        backdrop-filter: blur(4px);
+        z-index: -1;
+        pointer-events: none;
     }
 }
 
