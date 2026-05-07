@@ -24,6 +24,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Tab Switching Simulation
     const navLinks = document.querySelectorAll('.sidebar .nav-link');
+    const sections = document.querySelectorAll('.dashboard-section');
+
+    const showSection = (id) => {
+        sections.forEach(section => {
+            section.classList.add('d-none');
+            section.classList.remove('active');
+        });
+        const targetSection = document.querySelector(id);
+        if (targetSection) {
+            targetSection.classList.remove('d-none');
+            // Trigger animation
+            setTimeout(() => targetSection.classList.add('active'), 50);
+        }
+    };
+
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             if (link.getAttribute('href').startsWith('#')) {
@@ -31,15 +46,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 navLinks.forEach(l => l.classList.remove('active'));
                 link.classList.add('active');
                 
-                // Show corresponding section (simulation)
-                const targetId = link.getAttribute('href');
-                document.querySelectorAll('.dashboard-section').forEach(section => {
-                    section.classList.add('d-none');
-                });
-                document.querySelector(targetId)?.classList.remove('d-none');
+                showSection(link.getAttribute('href'));
             }
         });
     });
+
+    // Handle initial load
+    const initialHash = window.location.hash || (sections.length > 0 ? '#' + sections[0].id : null);
+    if (initialHash) {
+        showSection(initialHash);
+        const activeLink = document.querySelector(`.sidebar .nav-link[href="${initialHash}"]`);
+        if (activeLink) activeLink.classList.add('active');
+    }
 
     // Dummy Chart Initialization (if using Chart.js)
     // For now, just a placeholder for dashboard metrics

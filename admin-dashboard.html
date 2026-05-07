@@ -11,14 +11,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
 </head>
 <body class="bg-light">
 
     <div class="dashboard-wrapper">
         <!-- Sidebar -->
         <aside class="sidebar p-4 d-flex flex-column">
-            <div class="mb-5 px-3">
-                <a href="index.html" class="h4 fw-bold text-accent">UXWriter <span class="badge bg-danger-subtle text-danger fs-6 ms-1">Admin</span></a>
+            <div class="mb-5 px-4 pt-4">
+                <a href="index.html" class="h4 fw-bold text-white d-flex align-items-center">
+                    <i class="fas fa-feather-pointed text-accent me-2"></i>
+                    UXWriter.
+                    <span class="badge bg-danger-subtle text-danger fs-6 ms-2">Admin</span>
+                </a>
             </div>
             
             <ul class="nav flex-column gap-2 mb-auto">
@@ -59,127 +65,193 @@
                 </li>
             </ul>
 
-            <div class="glass-card p-3 text-center mt-auto">
-                <div class="d-flex justify-content-center gap-3">
-                    <div class="theme-toggle"><i class="fas fa-moon"></i></div>
-                    <div class="rtl-toggle"><i class="fas fa-language"></i></div>
-                </div>
+            <div class="mt-auto">
+                <!-- Sidebar footer or nothing -->
             </div>
         </aside>
 
         <!-- Main Content -->
         <main class="main-content">
             <!-- Header -->
-            <header class="d-flex justify-content-between align-items-center mb-5">
-                <div class="d-flex align-items-center gap-3">
-                    <button id="sidebarToggle" class="btn btn-light d-lg-none"><i class="fas fa-bars"></i></button>
-                    <h2 class="h4 mb-0 fw-bold">Admin Portal</h2>
+            <header class="dashboard-header">
+                <div class="d-flex align-items-center">
+                    <button id="sidebarToggle" class="btn btn-light d-lg-none me-3"><i class="fas fa-bars"></i></button>
                 </div>
-                <div class="d-flex align-items-center gap-4">
-                    <div class="dropdown">
-                        <div class="d-flex align-items-center gap-3 cursor-pointer" data-bs-toggle="dropdown">
-                            <div class="text-end d-none d-sm-block">
-                                <h6 class="mb-0 small fw-bold">Sarah Jenkins</h6>
-                                <span class="text-danger small">Super Admin</span>
-                            </div>
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop" class="rounded-circle" width="40" height="40" alt="Profile">
-                        </div>
-                        <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 glass-card">
-                            <li><a class="dropdown-item" href="#">System Status</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item text-danger" href="login.html">Logout</a></li>
-                        </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="rtl-toggle px-3 py-1 border rounded-pill small fw-bold cursor-pointer bg-light">RTL</div>
+                    <div class="theme-toggle cursor-pointer"><i class="fas fa-moon"></i></div>
+                    <div class="profile-pic">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop" class="rounded-circle" width="40" height="40" alt="Profile">
                     </div>
                 </div>
             </header>
 
-            <!-- Stats -->
-            <div class="row g-4 mb-5">
-                <div class="col-md-3">
-                    <div class="glass-card p-4">
-                        <span class="text-muted small fw-bold">Total Users</span>
-                        <h2 class="mt-2 mb-0">1,248</h2>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="glass-card p-4">
-                        <span class="text-muted small fw-bold">Monthly Revenue</span>
-                        <h2 class="mt-2 mb-0">$42,500</h2>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="glass-card p-4">
-                        <span class="text-muted small fw-bold">Active Projects</span>
-                        <h2 class="mt-2 mb-0">312</h2>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="glass-card p-4">
-                        <span class="text-muted small fw-bold">Pending Reviews</span>
-                        <h2 class="mt-2 mb-0">5</h2>
+            <!-- Page Title -->
+            <div class="page-title-center">
+                <h2 class="fw-bold mb-2">Admin Portal</h2>
+                <p class="text-danger small fw-bold text-uppercase mb-4">System Administration</p>
+                <div class="d-flex justify-content-center">
+                    <div class="input-group shadow-sm rounded-pill overflow-hidden" style="width: 100%; max-width: 400px;">
+                        <span class="input-group-text bg-white border-0"><i class="fas fa-search text-muted"></i></span>
+                        <input type="text" class="form-control border-0" placeholder="Search system...">
                     </div>
                 </div>
             </div>
 
-            <!-- User Management Table -->
-            <div class="glass-card overflow-hidden">
-                <div class="p-4 border-bottom d-flex justify-content-between align-items-center">
-                    <h5 class="mb-0">User Management</h5>
-                    <div class="d-flex gap-2">
-                        <input type="text" class="form-control form-control-sm" placeholder="Search users...">
-                        <button class="btn btn-accent btn-sm text-white">Filter</button>
+            <!-- Admin Overview Section -->
+            <div id="admin-overview" class="dashboard-section reveal">
+                <!-- Stats -->
+                <div class="row g-4 mb-5">
+                    <div class="col-xl-3 col-md-6">
+                        <div class="stat-card">
+                            <span class="text-muted small fw-bold text-uppercase">Total Users</span>
+                            <h2 class="mt-2 mb-0 fw-bold">1,248</h2>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="stat-card">
+                            <span class="text-muted small fw-bold text-uppercase">Monthly Revenue</span>
+                            <h2 class="mt-2 mb-0 fw-bold">$42,500</h2>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="stat-card">
+                            <span class="text-muted small fw-bold text-uppercase">Active Projects</span>
+                            <h2 class="mt-2 mb-0 fw-bold">312</h2>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="stat-card">
+                            <span class="text-muted small fw-bold text-uppercase">Pending Reviews</span>
+                            <h2 class="mt-2 mb-0 fw-bold">5</h2>
+                        </div>
                     </div>
                 </div>
-                <div class="table-responsive">
-                    <table class="table table-hover align-middle mb-0">
-                        <thead class="bg-light">
-                            <tr>
-                                <th class="ps-4">User</th>
-                                <th>Plan</th>
-                                <th>Join Date</th>
-                                <th>Status</th>
-                                <th class="text-end pe-4">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="ps-4">
-                                    <div class="d-flex align-items-center gap-3">
-                                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=50&auto=format&fit=crop" class="rounded-circle" alt="User">
-                                        <div>
-                                            <div class="fw-bold">Alex Johnson</div>
-                                            <div class="small text-muted">alex@company.com</div>
+            </div>
+
+            <!-- User Management Section -->
+            <div id="user-management" class="dashboard-section d-none">
+                <div class="dashboard-table">
+                    <div class="p-4 border-bottom d-flex justify-content-between align-items-center bg-white">
+                        <h5 class="mb-0 fw-bold">User Management</h5>
+                        <div class="d-flex gap-2">
+                            <input type="text" class="form-control form-control-sm rounded-pill shadow-none px-3" placeholder="Search users...">
+                            <button class="btn btn-accent btn-sm text-white rounded-pill px-3">Filter</button>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0">
+                            <thead class="bg-light">
+                                <tr>
+                                    <th class="ps-4">User</th>
+                                    <th>Plan</th>
+                                    <th>Join Date</th>
+                                    <th>Status</th>
+                                    <th class="text-end pe-4">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="ps-4">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=50&auto=format&fit=crop" class="rounded-circle" alt="User">
+                                            <div>
+                                                <div class="fw-bold">Alex Johnson</div>
+                                                <div class="small text-muted">alex@company.com</div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </td>
-                                <td><span class="badge bg-accent-subtle text-accent">Pro</span></td>
-                                <td>Jan 12, 2026</td>
-                                <td><span class="badge bg-success-subtle text-success">Active</span></td>
-                                <td class="text-end pe-4">
-                                    <button class="btn btn-light btn-sm"><i class="fas fa-edit"></i></button>
-                                    <button class="btn btn-light btn-sm text-danger"><i class="fas fa-trash"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="ps-4">
-                                    <div class="d-flex align-items-center gap-3">
-                                        <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=50&auto=format&fit=crop" class="rounded-circle" alt="User">
-                                        <div>
-                                            <div class="fw-bold">Emily Davis</div>
-                                            <div class="small text-muted">emily@startup.io</div>
+                                    </td>
+                                    <td><span class="badge bg-accent-subtle text-accent">Pro</span></td>
+                                    <td>Jan 12, 2026</td>
+                                    <td><span class="badge bg-success-subtle text-success">Active</span></td>
+                                    <td class="text-end pe-4">
+                                        <button class="btn btn-light btn-sm"><i class="fas fa-edit"></i></button>
+                                        <button class="btn btn-light btn-sm text-danger"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="ps-4">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=50&auto=format&fit=crop" class="rounded-circle" alt="User">
+                                            <div>
+                                                <div class="fw-bold">Emily Davis</div>
+                                                <div class="small text-muted">emily@startup.io</div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </td>
-                                <td><span class="badge bg-light text-dark">Starter</span></td>
-                                <td>Feb 05, 2026</td>
-                                <td><span class="badge bg-success-subtle text-success">Active</span></td>
-                                <td class="text-end pe-4">
-                                    <button class="btn btn-light btn-sm"><i class="fas fa-edit"></i></button>
-                                    <button class="btn btn-light btn-sm text-danger"><i class="fas fa-trash"></i></button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                                    </td>
+                                    <td><span class="badge bg-light text-dark">Starter</span></td>
+                                    <td>Feb 05, 2026</td>
+                                    <td><span class="badge bg-success-subtle text-success">Active</span></td>
+                                    <td class="text-end pe-4">
+                                        <button class="btn btn-light btn-sm"><i class="fas fa-edit"></i></button>
+                                        <button class="btn btn-light btn-sm text-danger"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- All Projects Section -->
+            <div id="all-projects" class="dashboard-section d-none">
+                <div class="stat-card">
+                    <h5 class="fw-bold mb-4">Global Projects Overview</h5>
+                    <p class="text-muted">Total active projects across all users: 312</p>
+                    <div class="row g-4 mt-2">
+                        <div class="col-md-6">
+                            <div class="p-4 border rounded-4 bg-light-subtle">
+                                <h6 class="fw-bold">Most Active Verticals</h6>
+                                <ul class="list-unstyled mt-3 mb-0">
+                                    <li class="d-flex justify-content-between mb-2"><span>SaaS</span> <span class="fw-bold text-accent">45%</span></li>
+                                    <li class="d-flex justify-content-between mb-2"><span>Fintech</span> <span class="fw-bold text-accent">30%</span></li>
+                                    <li class="d-flex justify-content-between"><span>E-commerce</span> <span class="fw-bold text-accent">25%</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reviews Section -->
+            <div id="reviews" class="dashboard-section d-none">
+                <div class="stat-card">
+                    <h5 class="mb-4 fw-bold">Pending Content Reviews</h5>
+                    <div class="list-group list-group-flush">
+                        <div class="list-group-item bg-transparent d-flex justify-content-between align-items-center py-3 px-0 border-bottom">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Onboarding Flow Refresh</h6>
+                                <span class="small text-muted">Submitted by Sarah Jenkins • 2 hours ago</span>
+                            </div>
+                            <button class="btn btn-accent btn-sm text-white rounded-pill px-4">Review Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analytics Section -->
+            <div id="analytics" class="dashboard-section d-none">
+                <div class="stat-card p-5 text-center">
+                    <div class="bg-primary-subtle p-4 rounded-circle d-inline-flex mb-4" style="width: 100px; height: 100px; align-items: center; justify-content: center;">
+                        <i class="fas fa-chart-bar fa-3x text-primary"></i>
+                    </div>
+                    <h3 class="fw-bold">Platform Analytics</h3>
+                    <p class="text-muted">Comprehensive data visualization and user insights coming soon.</p>
+                </div>
+            </div>
+
+            <!-- Admin Settings Section -->
+            <div id="admin-settings" class="dashboard-section d-none">
+                <div class="stat-card">
+                    <h5 class="mb-4 fw-bold">System Settings</h5>
+                    <div class="mb-4">
+                        <label class="form-label small fw-bold text-muted">Maintenance Mode</label>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input shadow-none" type="checkbox" id="maintSwitch">
+                            <label class="form-check-label small" for="maintSwitch">Enable Maintenance Mode (Restricts user access)</label>
+                        </div>
+                    </div>
+                    <button class="btn btn-danger rounded-pill px-4">Update System</button>
                 </div>
             </div>
         </main>
@@ -192,3 +264,5 @@
     <script src="assets/js/dashboard.js"></script>
 </body>
 </html>
+
+

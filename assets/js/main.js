@@ -2,36 +2,41 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     // Theme Toggle
-    const themeToggle = document.querySelector('.theme-toggle');
+    const themeToggles = document.querySelectorAll('.theme-toggle');
     const currentTheme = localStorage.getItem('theme') || 'light';
     
     document.documentElement.setAttribute('data-theme', currentTheme);
     
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
+    themeToggles.forEach(toggle => {
+        updateThemeIcon(toggle, currentTheme);
+        toggle.addEventListener('click', () => {
             const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
             document.documentElement.setAttribute('data-theme', theme);
             localStorage.setItem('theme', theme);
-            updateThemeIcon(theme);
+            themeToggles.forEach(t => updateThemeIcon(t, theme));
         });
-    }
+    });
 
-    function updateThemeIcon(theme) {
-        const icon = themeToggle?.querySelector('i');
+    function updateThemeIcon(toggle, theme) {
+        const icon = toggle.querySelector('i');
         if (icon) {
             icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
         }
     }
 
     // RTL Toggle
-    const rtlToggle = document.querySelector('.rtl-toggle');
-    if (rtlToggle) {
-        rtlToggle.addEventListener('click', () => {
+    const rtlToggles = document.querySelectorAll('.rtl-toggle');
+    const currentDir = localStorage.getItem('dir') || 'ltr';
+    document.documentElement.setAttribute('dir', currentDir);
+
+    rtlToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
             const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
-            document.documentElement.setAttribute('dir', isRTL ? 'ltr' : 'rtl');
-            localStorage.setItem('dir', isRTL ? 'ltr' : 'rtl');
+            const newDir = isRTL ? 'ltr' : 'rtl';
+            document.documentElement.setAttribute('dir', newDir);
+            localStorage.setItem('dir', newDir);
         });
-    }
+    });
 
     // Navbar Scroll Effect
     const navbar = document.querySelector('.navbar');
