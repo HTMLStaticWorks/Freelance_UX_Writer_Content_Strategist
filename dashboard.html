@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard | UXWriter</title>
-    
+
     <!-- Bootstrap 5 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -14,19 +15,20 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
 </head>
+
 <body class="bg-light">
 
     <div class="dashboard-wrapper">
         <!-- Sidebar -->
         <aside class="sidebar p-4 d-flex flex-column">
             <div class="mb-5 px-4 pt-4">
-                <a href="index.html" class="h4 fw-bold text-white d-flex align-items-center">
+                <a href="index.html" class="h4 fw-800 text-white d-flex align-items-center text-decoration-none">
                     <i class="fas fa-feather-pointed text-accent me-2"></i>
-                    UXWriter.
+                    <span class="text-accent">UX</span>Writer.
                 </a>
             </div>
-            
-            <ul class="nav flex-column gap-2 mb-auto">
+
+            <ul class="nav flex-column gap-2 mb-4">
                 <li class="nav-item">
                     <a class="nav-link active rounded-3 p-3 d-flex align-items-center" href="#overview">
                         <i class="fas fa-home me-3"></i> Overview
@@ -53,9 +55,9 @@
                     </a>
                 </li>
             </ul>
-            
-            <hr class="my-4 opacity-10">
-            
+
+            <hr class="my-3 opacity-10">
+
             <ul class="nav flex-column gap-2 mb-4">
                 <li class="nav-item">
                     <a class="nav-link rounded-3 p-3 d-flex align-items-center" href="#settings">
@@ -63,7 +65,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link rounded-3 p-3 d-flex align-items-center text-danger" href="login.html">
+                    <a class="nav-link rounded-3 p-3 d-flex align-items-center text-danger" href="index.html">
                         <i class="fas fa-sign-out-alt me-3"></i> Logout
                     </a>
                 </li>
@@ -82,10 +84,12 @@
                     <button id="sidebarToggle" class="btn btn-light d-lg-none me-3"><i class="fas fa-bars"></i></button>
                 </div>
                 <div class="d-flex align-items-center gap-3">
-                    <div class="rtl-toggle px-3 py-1 border rounded-pill small fw-bold cursor-pointer bg-light">RTL</div>
+                    <div class="rtl-toggle px-3 py-1 border rounded-pill small fw-bold cursor-pointer bg-light">RTL
+                    </div>
                     <div class="theme-toggle cursor-pointer"><i class="fas fa-moon"></i></div>
                     <div class="profile-pic">
-                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=100&auto=format&fit=crop" class="rounded-circle" width="40" height="40" alt="Profile">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=100&auto=format&fit=crop"
+                            class="rounded-circle" width="40" height="40" alt="Profile">
                     </div>
                 </div>
             </header>
@@ -93,12 +97,42 @@
             <!-- Page Title -->
             <div class="page-title-center">
                 <h2 class="fw-bold mb-2">Admin Dashboard</h2>
-                <p class="text-muted small mb-4">Welcome back, Alex Johnson</p>
+                <p class="text-muted small mb-3">Welcome back, Alex Johnson</p>
+                <p class="text-muted small mx-auto mb-4" style="max-width: 600px;">A centralized hub for product teams to upload copy decks, review microcopy options, track style guide alignment, and approve final strings.</p>
                 <div class="d-flex justify-content-center">
-                    <div class="input-group shadow-sm rounded-pill overflow-hidden" style="width: 100%; max-width: 400px;">
+                    <div class="input-group shadow-sm rounded-pill overflow-hidden"
+                        style="width: 100%; max-width: 400px;">
                         <span class="input-group-text bg-white border-0"><i class="fas fa-search text-muted"></i></span>
                         <input type="text" class="form-control border-0" placeholder="Search projects...">
                     </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="row g-4 mb-5 px-4">
+                <div class="col-md-3">
+                    <button class="btn btn-white w-100 p-3 rounded-4 shadow-sm border-0 d-flex align-items-center justify-content-center gap-2 transition hover-up" data-bs-toggle="modal" data-bs-target="#uploadModal">
+                        <i class="fas fa-cloud-upload-alt text-accent"></i>
+                        <span class="small fw-bold">Upload Decks</span>
+                    </button>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-white w-100 p-3 rounded-4 shadow-sm border-0 d-flex align-items-center justify-content-center gap-2 transition hover-up">
+                        <i class="fas fa-eye text-primary"></i>
+                        <span class="small fw-bold">Review Microcopy</span>
+                    </button>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-white w-100 p-3 rounded-4 shadow-sm border-0 d-flex align-items-center justify-content-center gap-2 transition hover-up">
+                        <i class="fas fa-tasks text-success"></i>
+                        <span class="small fw-bold">Track Alignment</span>
+                    </button>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-white w-100 p-3 rounded-4 shadow-sm border-0 d-flex align-items-center justify-content-center gap-2 transition hover-up">
+                        <i class="fas fa-check-circle text-warning"></i>
+                        <span class="small fw-bold">Approve Strings</span>
+                    </button>
                 </div>
             </div>
 
@@ -148,7 +182,8 @@
                 <div class="dashboard-table">
                     <div class="p-4 border-bottom d-flex justify-content-between align-items-center bg-white">
                         <h5 class="mb-0 fw-bold">Recent Projects</h5>
-                        <button class="btn btn-accent btn-sm text-white px-3 rounded-pill" data-bs-toggle="modal" data-bs-target="#uploadModal">New Project</button>
+                        <button class="btn btn-accent btn-sm text-white px-3 rounded-pill" data-bs-toggle="modal"
+                            data-bs-target="#uploadModal">New Project</button>
                     </div>
                     <div class="table-responsive">
                         <table class="table table-hover align-middle mb-0">
@@ -158,7 +193,7 @@
                                     <th>Status</th>
                                     <th>Last Updated</th>
                                     <th>Assigned To</th>
-                                    <th class="text-end pe-4">Actions</th>
+                                    <th class="text-center">Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -170,8 +205,19 @@
                                     <td><span class="badge bg-success-subtle text-success">In Progress</span></td>
                                     <td>2 hours ago</td>
                                     <td>Sarah Jenkins</td>
-                                    <td class="text-end pe-4">
-                                        <button class="btn btn-light btn-sm rounded-circle"><i class="fas fa-ellipsis-v"></i></button>
+                                    <td class="text-center">
+                                        <div class="dropdown">
+                                            <button class="btn btn-light btn-sm rounded-circle" type="button" data-bs-toggle="dropdown">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end shadow border-0 rounded-4 p-2">
+                                                <li><a class="dropdown-item rounded-3 small" href="#"><i class="fas fa-eye me-2 text-muted"></i> View Details</a></li>
+                                                <li><a class="dropdown-item rounded-3 small" href="#"><i class="fas fa-edit me-2 text-muted"></i> Edit Project</a></li>
+                                                <li><a class="dropdown-item rounded-3 small" href="#"><i class="fas fa-download me-2 text-muted"></i> Download Deck</a></li>
+                                                <li><hr class="dropdown-divider opacity-50"></li>
+                                                <li><a class="dropdown-item rounded-3 small text-danger" href="#"><i class="fas fa-trash-can me-2"></i> Delete</a></li>
+                                            </ul>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
@@ -182,8 +228,19 @@
                                     <td><span class="badge bg-warning-subtle text-warning">Awaiting Approval</span></td>
                                     <td>Yesterday</td>
                                     <td>Sarah Jenkins</td>
-                                    <td class="text-end pe-4">
-                                        <button class="btn btn-light btn-sm rounded-circle"><i class="fas fa-ellipsis-v"></i></button>
+                                    <td class="text-center">
+                                        <div class="dropdown">
+                                            <button class="btn btn-light btn-sm rounded-circle" type="button" data-bs-toggle="dropdown">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end shadow border-0 rounded-4 p-2">
+                                                <li><a class="dropdown-item rounded-3 small" href="#"><i class="fas fa-eye me-2 text-muted"></i> View Details</a></li>
+                                                <li><a class="dropdown-item rounded-3 small" href="#"><i class="fas fa-edit me-2 text-muted"></i> Edit Project</a></li>
+                                                <li><a class="dropdown-item rounded-3 small" href="#"><i class="fas fa-download me-2 text-muted"></i> Download Deck</a></li>
+                                                <li><hr class="dropdown-divider opacity-50"></li>
+                                                <li><a class="dropdown-item rounded-3 small text-danger" href="#"><i class="fas fa-trash-can me-2"></i> Delete</a></li>
+                                            </ul>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
@@ -194,8 +251,19 @@
                                     <td><span class="badge bg-info-subtle text-info">In Review</span></td>
                                     <td>3 days ago</td>
                                     <td>Sarah Jenkins</td>
-                                    <td class="text-end pe-4">
-                                        <button class="btn btn-light btn-sm rounded-circle"><i class="fas fa-ellipsis-v"></i></button>
+                                    <td class="text-center">
+                                        <div class="dropdown">
+                                            <button class="btn btn-light btn-sm rounded-circle" type="button" data-bs-toggle="dropdown">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end shadow border-0 rounded-4 p-2">
+                                                <li><a class="dropdown-item rounded-3 small" href="#"><i class="fas fa-eye me-2 text-muted"></i> View Details</a></li>
+                                                <li><a class="dropdown-item rounded-3 small" href="#"><i class="fas fa-edit me-2 text-muted"></i> Edit Project</a></li>
+                                                <li><a class="dropdown-item rounded-3 small" href="#"><i class="fas fa-download me-2 text-muted"></i> Download Deck</a></li>
+                                                <li><hr class="dropdown-divider opacity-50"></li>
+                                                <li><a class="dropdown-item rounded-3 small text-danger" href="#"><i class="fas fa-trash-can me-2"></i> Delete</a></li>
+                                            </ul>
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>
@@ -203,7 +271,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Projects Section -->
             <div id="projects" class="dashboard-section d-none">
                 <div class="stat-card">
@@ -221,42 +289,54 @@
                     <div class="row g-4">
                         <div class="col-md-4">
                             <div class="p-4 border rounded-4 text-center transition hover-shadow">
-                                <div class="icon-box mb-3 mx-auto bg-light p-3 rounded-circle" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-wallet text-accent fa-lg"></i></div>
+                                <div class="icon-box mb-3 mx-auto bg-light p-3 rounded-circle"
+                                    style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-wallet text-accent fa-lg"></i></div>
                                 <h6 class="fw-bold">Fintech App</h6>
                                 <p class="small text-muted mb-0">15 Screens • Ongoing</p>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="p-4 border rounded-4 text-center transition hover-shadow">
-                                <div class="icon-box mb-3 mx-auto bg-light p-3 rounded-circle" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-heart-pulse text-accent fa-lg"></i></div>
+                                <div class="icon-box mb-3 mx-auto bg-light p-3 rounded-circle"
+                                    style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-heart-pulse text-accent fa-lg"></i></div>
                                 <h6 class="fw-bold">Health Tracker</h6>
                                 <p class="small text-muted mb-0">8 Screens • Completed</p>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="p-4 border rounded-4 text-center transition hover-shadow">
-                                <div class="icon-box mb-3 mx-auto bg-light p-3 rounded-circle" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-shopping-bag text-accent fa-lg"></i></div>
+                                <div class="icon-box mb-3 mx-auto bg-light p-3 rounded-circle"
+                                    style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-shopping-bag text-accent fa-lg"></i></div>
                                 <h6 class="fw-bold">Shopify Plugin</h6>
                                 <p class="small text-muted mb-0">4 Screens • In Review</p>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="p-4 border rounded-4 text-center transition hover-shadow">
-                                <div class="icon-box mb-3 mx-auto bg-light p-3 rounded-circle" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-mobile-screen text-accent fa-lg"></i></div>
+                                <div class="icon-box mb-3 mx-auto bg-light p-3 rounded-circle"
+                                    style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-mobile-screen text-accent fa-lg"></i></div>
                                 <h6 class="fw-bold">Fitness App</h6>
                                 <p class="small text-muted mb-0">22 Screens • Active</p>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="p-4 border rounded-4 text-center transition hover-shadow">
-                                <div class="icon-box mb-3 mx-auto bg-light p-3 rounded-circle" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-earth-americas text-accent fa-lg"></i></div>
+                                <div class="icon-box mb-3 mx-auto bg-light p-3 rounded-circle"
+                                    style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-earth-americas text-accent fa-lg"></i></div>
                                 <h6 class="fw-bold">Travel Web</h6>
                                 <p class="small text-muted mb-0">12 Screens • Discovery</p>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="p-4 border rounded-4 text-center transition hover-shadow">
-                                <div class="icon-box mb-3 mx-auto bg-light p-3 rounded-circle" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-briefcase text-accent fa-lg"></i></div>
+                                <div class="icon-box mb-3 mx-auto bg-light p-3 rounded-circle"
+                                    style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-briefcase text-accent fa-lg"></i></div>
                                 <h6 class="fw-bold">B2B Portal</h6>
                                 <p class="small text-muted mb-0">6 Screens • On Hold</p>
                             </div>
@@ -270,55 +350,70 @@
                 <div class="stat-card">
                     <h5 class="mb-4 fw-bold">Content Repository</h5>
                     <div class="list-group list-group-flush">
-                        <div class="list-group-item bg-transparent d-flex justify-content-between align-items-center py-3 px-0 border-bottom">
+                        <div
+                            class="list-group-item bg-transparent d-flex justify-content-between align-items-center py-3 px-0 border-bottom">
                             <div class="d-flex align-items-center">
-                                <div class="bg-primary-subtle p-2 rounded-3 me-3"><i class="far fa-file-word fa-2x text-primary"></i></div>
-                                <div>
-                                    <h6 class="mb-0 fw-bold">Onboarding_V2.docx</h6>
+                                <div class="bg-primary-subtle p-2 rounded-3 me-3"><i
+                                        class="far fa-file-word fa-2x text-primary"></i></div>
+                                <div style="max-width: 180px;">
+                                    <h6 class="mb-0 fw-bold text-truncate" title="Onboarding_V2.docx">Onboarding_V2.docx</h6>
                                     <span class="small text-muted">2.4 MB • Updated yesterday</span>
                                 </div>
                             </div>
-                            <button class="btn btn-light btn-sm rounded-circle shadow-sm"><i class="fas fa-download"></i></button>
+                            <button class="btn btn-light btn-sm rounded-circle shadow-sm"><i
+                                    class="fas fa-download"></i></button>
                         </div>
-                        <div class="list-group-item bg-transparent d-flex justify-content-between align-items-center py-3 px-0 border-bottom">
+                        <div
+                            class="list-group-item bg-transparent d-flex justify-content-between align-items-center py-3 px-0 border-bottom">
                             <div class="d-flex align-items-center">
-                                <div class="bg-danger-subtle p-2 rounded-3 me-3"><i class="far fa-file-pdf fa-2x text-danger"></i></div>
-                                <div>
-                                    <h6 class="mb-0 fw-bold">Brand_Voice_Guidelines.pdf</h6>
+                                <div class="bg-danger-subtle p-2 rounded-3 me-3"><i
+                                        class="far fa-file-pdf fa-2x text-danger"></i></div>
+                                <div style="max-width: 180px;">
+                                    <h6 class="mb-0 fw-bold text-truncate" title="Brand_Voice_Guidelines.pdf">Brand_Voice_Guidelines.pdf</h6>
                                     <span class="small text-muted">1.8 MB • Updated 1 week ago</span>
                                 </div>
                             </div>
-                            <button class="btn btn-light btn-sm rounded-circle shadow-sm"><i class="fas fa-download"></i></button>
+                            <button class="btn btn-light btn-sm rounded-circle shadow-sm"><i
+                                    class="fas fa-download"></i></button>
                         </div>
-                        <div class="list-group-item bg-transparent d-flex justify-content-between align-items-center py-3 px-0 border-bottom">
+                        <div
+                            class="list-group-item bg-transparent d-flex justify-content-between align-items-center py-3 px-0 border-bottom">
                             <div class="d-flex align-items-center">
-                                <div class="bg-success-subtle p-2 rounded-3 me-3"><i class="far fa-file-excel fa-2x text-success"></i></div>
-                                <div>
-                                    <h6 class="mb-0 fw-bold">String_Audit_Q2.xlsx</h6>
+                                <div class="bg-success-subtle p-2 rounded-3 me-3"><i
+                                        class="far fa-file-excel fa-2x text-success"></i></div>
+                                <div style="max-width: 180px;">
+                                    <h6 class="mb-0 fw-bold text-truncate" title="String_Audit_Q2.xlsx">String_Audit_Q2.xlsx</h6>
                                     <span class="small text-muted">542 KB • Updated 2 days ago</span>
                                 </div>
                             </div>
-                            <button class="btn btn-light btn-sm rounded-circle shadow-sm"><i class="fas fa-download"></i></button>
+                            <button class="btn btn-light btn-sm rounded-circle shadow-sm"><i
+                                    class="fas fa-download"></i></button>
                         </div>
-                        <div class="list-group-item bg-transparent d-flex justify-content-between align-items-center py-3 px-0 border-bottom">
+                        <div
+                            class="list-group-item bg-transparent d-flex justify-content-between align-items-center py-3 px-0 border-bottom">
                             <div class="d-flex align-items-center">
-                                <div class="bg-info-subtle p-2 rounded-3 me-3"><i class="far fa-file-powerpoint fa-2x text-info"></i></div>
-                                <div>
-                                    <h6 class="mb-0 fw-bold">Content_Strategy_Deck.pptx</h6>
+                                <div class="bg-info-subtle p-2 rounded-3 me-3"><i
+                                        class="far fa-file-powerpoint fa-2x text-info"></i></div>
+                                <div style="max-width: 180px;">
+                                    <h6 class="mb-0 fw-bold text-truncate" title="Content_Strategy_Deck.pptx">Content_Strategy_Deck.pptx</h6>
                                     <span class="small text-muted">5.6 MB • Updated 3 weeks ago</span>
                                 </div>
                             </div>
-                            <button class="btn btn-light btn-sm rounded-circle shadow-sm"><i class="fas fa-download"></i></button>
+                            <button class="btn btn-light btn-sm rounded-circle shadow-sm"><i
+                                    class="fas fa-download"></i></button>
                         </div>
-                        <div class="list-group-item bg-transparent d-flex justify-content-between align-items-center py-3 px-0">
+                        <div
+                            class="list-group-item bg-transparent d-flex justify-content-between align-items-center py-3 px-0">
                             <div class="d-flex align-items-center">
-                                <div class="bg-warning-subtle p-2 rounded-3 me-3"><i class="fas fa-file-code fa-2x text-warning"></i></div>
-                                <div>
-                                    <h6 class="mb-0 fw-bold">Localization_Strings.json</h6>
+                                <div class="bg-warning-subtle p-2 rounded-3 me-3"><i
+                                        class="fas fa-file-code fa-2x text-warning"></i></div>
+                                <div style="max-width: 180px;">
+                                    <h6 class="mb-0 fw-bold text-truncate" title="Localization_Strings.json">Localization_Strings.json</h6>
                                     <span class="small text-muted">128 KB • Updated 4 hours ago</span>
                                 </div>
                             </div>
-                            <button class="btn btn-light btn-sm rounded-circle shadow-sm"><i class="fas fa-download"></i></button>
+                            <button class="btn btn-light btn-sm rounded-circle shadow-sm"><i
+                                    class="fas fa-download"></i></button>
                         </div>
                     </div>
                 </div>
@@ -333,25 +428,29 @@
                         <div class="col-md-6">
                             <div class="p-4 border rounded-4 mb-4 bg-light-subtle">
                                 <h5 class="fw-bold">Voice & Tone</h5>
-                                <p class="small text-muted mb-0">Our voice is helpful, transparent, and direct. We speak to users as a knowledgeable partner.</p>
+                                <p class="small text-muted mb-0">Our voice is helpful, transparent, and direct. We speak
+                                    to users as a knowledgeable partner.</p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="p-4 border rounded-4 mb-4 bg-light-subtle">
                                 <h5 class="fw-bold">Punctuation</h5>
-                                <p class="small text-muted mb-0">Use sentence case for headings. No full stops in buttons. Oxford commas are mandatory.</p>
+                                <p class="small text-muted mb-0">Use sentence case for headings. No full stops in
+                                    buttons. Oxford commas are mandatory.</p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="p-4 border rounded-4 mb-4 bg-light-subtle">
                                 <h5 class="fw-bold">Error Messages</h5>
-                                <p class="small text-muted mb-0">Don't blame the user. Offer a solution. Use active voice and avoid jargon like "Error 404".</p>
+                                <p class="small text-muted mb-0">Don't blame the user. Offer a solution. Use active
+                                    voice and avoid jargon like "Error 404".</p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="p-4 border rounded-4 mb-4 bg-light-subtle">
                                 <h5 class="fw-bold">Date & Time</h5>
-                                <p class="small text-muted mb-0">Use 24-hour format for system logs and 12-hour for user activity. Relative dates for < 24h.</p>
+                                <p class="small text-muted mb-0">Use 24-hour format for system logs and 12-hour for user
+                                    activity. Relative dates for < 24h.</p>
                             </div>
                         </div>
                     </div>
@@ -363,44 +462,56 @@
                 <div class="stat-card">
                     <h5 class="mb-4 fw-bold">Recent Conversations</h5>
                     <div class="d-flex flex-column gap-3">
-                        <div class="p-3 border rounded-4 d-flex align-items-center gap-3 transition hover-shadow cursor-pointer">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=50&auto=format&fit=crop" class="rounded-circle shadow-sm" width="45" alt="User">
+                        <div
+                            class="p-3 border rounded-4 d-flex align-items-center gap-3 transition hover-shadow cursor-pointer">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=50&auto=format&fit=crop"
+                                class="rounded-circle shadow-sm" width="45" alt="User">
                             <div class="flex-grow-1">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="mb-0 fw-bold">Sarah Jenkins</h6>
                                     <span class="small text-muted">10:45 AM</span>
                                 </div>
-                                <p class="small text-muted mb-0">I've updated the review for the onboarding flow. Let me know what you think!</p>
+                                <p class="small text-muted mb-0">I've updated the review for the onboarding flow. Let me
+                                    know what you think!</p>
                             </div>
                         </div>
-                        <div class="p-3 border rounded-4 d-flex align-items-center gap-3 transition hover-shadow cursor-pointer">
-                            <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=50&auto=format&fit=crop" class="rounded-circle shadow-sm" width="45" alt="User">
+                        <div
+                            class="p-3 border rounded-4 d-flex align-items-center gap-3 transition hover-shadow cursor-pointer">
+                            <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=50&auto=format&fit=crop"
+                                class="rounded-circle shadow-sm" width="45" alt="User">
                             <div class="flex-grow-1">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="mb-0 fw-bold">Michael Chen</h6>
                                     <span class="small text-muted">Yesterday</span>
                                 </div>
-                                <p class="small text-muted mb-0">Can we hop on a quick call to discuss the new voice guidelines for the mobile app?</p>
+                                <p class="small text-muted mb-0">Can we hop on a quick call to discuss the new voice
+                                    guidelines for the mobile app?</p>
                             </div>
                         </div>
-                        <div class="p-3 border rounded-4 d-flex align-items-center gap-3 transition hover-shadow cursor-pointer">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=50&auto=format&fit=crop" class="rounded-circle shadow-sm" width="45" alt="User">
+                        <div
+                            class="p-3 border rounded-4 d-flex align-items-center gap-3 transition hover-shadow cursor-pointer">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=50&auto=format&fit=crop"
+                                class="rounded-circle shadow-sm" width="45" alt="User">
                             <div class="flex-grow-1">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="mb-0 fw-bold">Emily Blunt</h6>
                                     <span class="small text-muted">2 days ago</span>
                                 </div>
-                                <p class="small text-muted mb-0">The copy for the checkout page is approved. Sending it to development now!</p>
+                                <p class="small text-muted mb-0">The copy for the checkout page is approved. Sending it
+                                    to development now!</p>
                             </div>
                         </div>
-                        <div class="p-3 border rounded-4 d-flex align-items-center gap-3 transition hover-shadow cursor-pointer">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=50&auto=format&fit=crop" class="rounded-circle shadow-sm" width="45" alt="User">
+                        <div
+                            class="p-3 border rounded-4 d-flex align-items-center gap-3 transition hover-shadow cursor-pointer">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=50&auto=format&fit=crop"
+                                class="rounded-circle shadow-sm" width="45" alt="User">
                             <div class="flex-grow-1">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="mb-0 fw-bold">David Miller</h6>
                                     <span class="small text-muted">Last week</span>
                                 </div>
-                                <p class="small text-muted mb-0">Hey Alex, did you have a chance to look at the microcopy audit for the B2B portal?</p>
+                                <p class="small text-muted mb-0">Hey Alex, did you have a chance to look at the
+                                    microcopy audit for the B2B portal?</p>
                             </div>
                         </div>
                     </div>
@@ -421,13 +532,15 @@
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label class="form-label small fw-bold text-muted">Email Address</label>
-                                <input type="email" class="form-control rounded-pill shadow-none" value="alex@company.com">
+                                <input type="email" class="form-control rounded-pill shadow-none"
+                                    value="alex@company.com">
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-check form-switch mb-4">
                                 <input class="form-check-input shadow-none" type="checkbox" checked id="notifSwitch">
-                                <label class="form-check-label small fw-bold text-muted" for="notifSwitch">Email Notifications</label>
+                                <label class="form-check-label small fw-bold text-muted" for="notifSwitch">Email
+                                    Notifications</label>
                             </div>
                             <button class="btn btn-accent text-white rounded-pill px-4">Save Changes</button>
                         </div>
@@ -471,6 +584,7 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/dashboard.js"></script>
 </body>
+
 </html>
 
 

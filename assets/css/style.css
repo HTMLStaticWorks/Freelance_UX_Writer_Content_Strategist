@@ -33,6 +33,27 @@
     background-color: var(--accent) !important;
 }
 
+.bg-accent-subtle {
+    background-color: rgba(var(--accent-rgb), 0.1) !important;
+}
+
+.text-accent {
+    color: var(--accent) !important;
+}
+
+.hover-up {
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.hover-up:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+}
+
+.fw-800 {
+    font-weight: 800 !important;
+}
+
 [data-theme="dark"] {
     --primary: #14B8A6;
     /* Bright Teal for accents in dark mode */
