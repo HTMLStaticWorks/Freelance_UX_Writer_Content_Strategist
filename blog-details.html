@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Details | UX Writer</title>
+    
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Header (Same as index) -->
+    <nav class="navbar navbar-expand-lg fixed-top py-4 transition glass-nav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="fas fa-feather-pointed text-accent me-2"></i>
+                <span class="text-accent">UX</span>Writer.
+            </a>
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <i class="fas fa-bars-staggered"></i>
+            </button>
+            
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header border-bottom">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Hire me</a></li>
+                        <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+                        <div class="theme-toggle" title="Toggle Theme"><i class="fas fa-moon"></i></div>
+                        <div class="rtl-toggle px-3" title="Toggle RTL">
+                            <span class="small fw-bold">RTL</span>
+                        </div>
+                        <a href="login.html" class="btn-premium btn-premium-primary">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Post Header -->
+    <section class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1000&auto=format&fit=crop');">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <div class="mb-3"><span class="badge bg-accent-subtle text-accent">Strategy</span> <span class="text-white ms-2">May 5, 2026</span></div>
+                    <h1 class="hero-title reveal">Why Microcopy is Your Product's Best Friend</h1>
+                    <div class="d-flex justify-content-center align-items-center gap-3 mt-4 reveal" style="transition-delay: 0.2s;">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop" class="rounded-circle" width="40" height="40" alt="Author">
+                        <span class="text-white">By Sarah Jenkins</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Post Content -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="reveal">
+                        <p class="lead">Microcopy is the silent workhorse of UX design. It's the small snippets of text that guide users through a product, from button labels to error messages.</p>
+                        
+                        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1000&auto=format&fit=crop" class="img-fluid rounded-4 my-5" alt="Blog Image">
+                        
+                        <p>In the world of SaaS, where complex workflows are common, the right microcopy can be the difference between a successful conversion and a frustrated bounce. Many teams focus heavily on the visual design, leaving the text as an afterthought. But great UX is a conversation between the user and the system.</p>
+                        
+                        <h4 class="mt-5">1. Building Trust through Transparency</h4>
+                        <p>When a user is asked for sensitive information, a simple tooltip explaining *why* it's needed can significantly reduce anxiety. Transparent microcopy builds long-term trust.</p>
+                        
+                        <h4 class="mt-4">2. Guiding the Way</h4>
+                        <p>Button labels should be action-oriented. Instead of "Submit," use "Create My Account" or "Get Started." Tell the user exactly what will happen next.</p>
+                        
+                        <blockquote class="p-4 border-start border-accent border-4 bg-light my-5 rounded">
+                            "Content design is not just about words; it's about solving user problems with the most efficient communication possible."
+                        </blockquote>
+                        
+                        <p>As products scale, having a centralized microcopy library or a voice/tone system becomes essential. It ensures that whether a user is in the settings panel or the checkout page, the brand sounds like the same helpful assistant.</p>
+                        
+                        <!-- Share -->
+                        <div class="d-flex align-items-center gap-3 mt-5 pt-4 border-top">
+                            <span class="fw-bold">Share this article:</span>
+                            <a href="#" class="text-accent"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-accent"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-accent"><i class="fab fa-facebook"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Comments Simulation -->
+                    <div class="mt-100 reveal">
+                        <h3>Comments (2)</h3>
+                        <div class="d-flex gap-3 mt-4">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&auto=format&fit=crop" class="rounded-circle" width="50" height="50" alt="User">
+                            <div class="glass-card p-3 flex-grow-1">
+                                <h6 class="mb-1">David Chen</h6>
+                                <p class="text-muted small mb-2">May 6, 2026</p>
+                                <p class="mb-0">Great insights! I've seen a huge difference in onboarding metrics just by changing the placeholder text in forms.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-primary text-white">
+        <div class="container text-center">
+            <p>&copy; 2026 UXWriter. Premium Content Strategy.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

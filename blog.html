@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | UX Writing & SaaS Content Insights</title>
+    
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg fixed-top py-4 transition glass-nav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="fas fa-feather-pointed text-accent me-2"></i>
+                <span class="text-accent">UX</span>Writer.
+            </a>
+            
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <i class="fas fa-bars-staggered"></i>
+            </button>
+            
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header border-bottom">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Hire me</a></li>
+                        <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="theme-toggle" title="Toggle Theme"><i class="fas fa-moon"></i></div>
+                        <div class="rtl-toggle px-3" title="Toggle RTL">
+                            <span class="small fw-bold">RTL</span>
+                        </div>
+                        <a href="login.html" class="btn-premium btn-premium-primary">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1000&auto=format&fit=crop');">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="hero-glass-box reveal text-center">
+                        <h1 class="hero-title">Content <span class="text-accent">Insights</span></h1>
+                        <p class="lead mb-0">Thoughts on UX writing, product strategy, and the power of words.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="py-100 bg-white">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Blog Grid -->
+                <div class="col-lg-8">
+                    <div class="row g-4">
+                        <div class="col-md-12 reveal">
+                            <div class="glass-card overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1000&auto=format&fit=crop" class="img-fluid w-100" style="height: 300px; object-fit: cover;" alt="Featured Blog">
+                                <div class="p-5">
+                                    <div class="mb-3"><span class="badge bg-accent-subtle text-accent">Strategy</span> <span class="text-muted ms-2 small">May 5, 2026</span></div>
+                                    <h3>Why Microcopy is Your Product's Best Friend</h3>
+                                    <p class="text-muted">Explore how small words can solve big problems in user experience design.</p>
+                                    <a href="blog-details.html" class="btn-premium btn-premium-outline">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 reveal">
+                            <div class="glass-card overflow-hidden h-100">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop" class="img-fluid w-100" style="height: 200px; object-fit: cover;" alt="Onboarding Flows">
+                                <div class="p-4">
+                                    <div class="mb-2"><span class="badge bg-accent-subtle text-accent">SaaS</span> <span class="text-muted ms-2 small">May 2, 2026</span></div>
+                                    <h4>Onboarding Flows: A Content Perspective</h4>
+                                    <p class="text-muted small">The secret to keeping users after the first click.</p>
+                                    <a href="blog-details.html" class="btn-link text-accent fw-bold">Read Article <i class="fas fa-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 reveal" style="transition-delay: 0.1s;">
+                            <div class="glass-card overflow-hidden h-100">
+                                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=600&auto=format&fit=crop" class="img-fluid w-100" style="height: 200px; object-fit: cover;" alt="Voice System">
+                                <div class="p-4">
+                                    <div class="mb-2"><span class="badge bg-accent-subtle text-accent">Voice</span> <span class="text-muted ms-2 small">Apr 28, 2026</span></div>
+                                    <h4>Building a Voice & Tone System from Scratch</h4>
+                                    <p class="text-muted small">A step-by-step guide for growing product teams.</p>
+                                    <a href="blog-details.html" class="btn-link text-accent fw-bold">Read Article <i class="fas fa-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4 New Blog Posts -->
+                        <div class="col-md-6 reveal">
+                            <div class="glass-card overflow-hidden h-100">
+                                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop" class="img-fluid w-100" style="height: 200px; object-fit: cover;" alt="Content Audit">
+                                <div class="p-4">
+                                    <div class="mb-2"><span class="badge bg-accent-subtle text-accent">Audits</span> <span class="text-muted ms-2 small">Apr 20, 2026</span></div>
+                                    <h4>The Content Audit Checklist</h4>
+                                    <p class="text-muted small">15 things to look for when auditing your product copy.</p>
+                                    <a href="blog-details.html" class="btn-link text-accent fw-bold">Read Article <i class="fas fa-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 reveal" style="transition-delay: 0.1s;">
+                            <div class="glass-card overflow-hidden h-100">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop" class="img-fluid w-100" style="height: 200px; object-fit: cover;" alt="Metrics">
+                                <div class="p-4">
+                                    <div class="mb-2"><span class="badge bg-accent-subtle text-accent">Metrics</span> <span class="text-muted ms-2 small">Apr 15, 2026</span></div>
+                                    <h4>Measuring the ROI of UX Writing</h4>
+                                    <p class="text-muted small">How to prove that better words lead to better business.</p>
+                                    <a href="blog-details.html" class="btn-link text-accent fw-bold">Read Article <i class="fas fa-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 reveal">
+                            <div class="glass-card overflow-hidden h-100">
+                                <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=600&auto=format&fit=crop" class="img-fluid w-100" style="height: 200px; object-fit: cover;" alt="Figma">
+                                <div class="p-4">
+                                    <div class="mb-2"><span class="badge bg-accent-subtle text-accent">Design</span> <span class="text-muted ms-2 small">Apr 10, 2026</span></div>
+                                    <h4>Figma for Writers: A Survival Guide</h4>
+                                    <p class="text-muted small">Mastering the design tool as a content specialist.</p>
+                                    <a href="blog-details.html" class="btn-link text-accent fw-bold">Read Article <i class="fas fa-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 reveal" style="transition-delay: 0.1s;">
+                            <div class="glass-card overflow-hidden h-100">
+                                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop" class="img-fluid w-100" style="height: 200px; object-fit: cover;" alt="AI Content">
+                                <div class="p-4">
+                                    <div class="mb-2"><span class="badge bg-accent-subtle text-accent">AI</span> <span class="text-muted ms-2 small">Apr 05, 2026</span></div>
+                                    <h4>AI and the Future of Content Design</h4>
+                                    <p class="text-muted small">Why prompt engineering is the next essential skill.</p>
+                                    <a href="blog-details.html" class="btn-link text-accent fw-bold">Read Article <i class="fas fa-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <nav class="mt-5">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <div class="glass-card p-4 mb-4">
+                        <h5 class="mb-3">Search</h5>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search articles...">
+                            <button class="btn btn-accent text-white"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    <div class="glass-card p-4 mb-4">
+                        <h5 class="mb-3">Categories</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2 d-flex justify-content-between"><a href="#">UX Writing</a> <span class="text-muted">(12)</span></li>
+                            <li class="mb-2 d-flex justify-content-between"><a href="#">SaaS Content</a> <span class="text-muted">(8)</span></li>
+                            <li class="mb-2 d-flex justify-content-between"><a href="#">Copy Strategy</a> <span class="text-muted">(15)</span></li>
+                            <li class="mb-2 d-flex justify-content-between"><a href="#">Product UX</a> <span class="text-muted">(10)</span></li>
+                            <li class="mb-2 d-flex justify-content-between"><a href="#">Localization</a> <span class="text-muted">(5)</span></li>
+                            <li class="mb-2 d-flex justify-content-between"><a href="#">AI Content</a> <span class="text-muted">(3)</span></li>
+                            <!-- 10 More Categories -->
+                            <li class="mb-2 d-flex justify-content-between"><a href="#">Microcopy</a> <span class="text-muted">(22)</span></li>
+                            <li class="mb-2 d-flex justify-content-between"><a href="#">Content Audits</a> <span class="text-muted">(7)</span></li>
+                            <li class="mb-2 d-flex justify-content-between"><a href="#">Design Systems</a> <span class="text-muted">(9)</span></li>
+                            <li class="mb-2 d-flex justify-content-between"><a href="#">Voice & Tone</a> <span class="text-muted">(14)</span></li>
+                            <li class="mb-2 d-flex justify-content-between"><a href="#">User Research</a> <span class="text-muted">(11)</span></li>
+                            <li class="mb-2 d-flex justify-content-between"><a href="#">Onboarding</a> <span class="text-muted">(18)</span></li>
+                            <li class="mb-2 d-flex justify-content-between"><a href="#">Mobile UX</a> <span class="text-muted">(6)</span></li>
+                            <li class="mb-2 d-flex justify-content-between"><a href="#">Web Accessibility</a> <span class="text-muted">(13)</span></li>
+                            <li class="mb-2 d-flex justify-content-between"><a href="#">B2B SaaS</a> <span class="text-muted">(20)</span></li>
+                            <li class="mb-2 d-flex justify-content-between"><a href="#">Product Growth</a> <span class="text-muted">(17)</span></li>
+                        </ul>
+                    </div>
+                    <div class="glass-card p-4 mb-4">
+                        <h5 class="mb-3">Recent Comments</h5>
+                        <div class="mb-3 border-bottom pb-2">
+                            <p class="small mb-1 fw-bold">Sarah Jenkins</p>
+                            <p class="small text-muted mb-0">"This guide to microcopy is exactly what I needed..."</p>
+                        </div>
+                        <div class="mb-3 border-bottom pb-2">
+                            <p class="small mb-1 fw-bold">Tom Holland</p>
+                            <p class="small text-muted mb-0">"ROI in UX writing is often overlooked. Great read!"</p>
+                        </div>
+                        <!-- 4 More Comments -->
+                        <div class="mb-3 border-bottom pb-2">
+                            <p class="small mb-1 fw-bold">Emily Blunt</p>
+                            <p class="small text-muted mb-0">"The localization tips are gold. Thank you!"</p>
+                        </div>
+                        <div class="mb-3 border-bottom pb-2">
+                            <p class="small mb-1 fw-bold">Chris Pratt</p>
+                            <p class="small text-muted mb-0">"Finally a clear explanation of voice vs tone."</p>
+                        </div>
+                        <div class="mb-3 border-bottom pb-2">
+                            <p class="small mb-1 fw-bold">Zoe Saldana</p>
+                            <p class="small text-muted mb-0">"Figma for writers is a game changer. More like this!"</p>
+                        </div>
+                        <div class="mb-0">
+                            <p class="small mb-1 fw-bold">Robert Downey</p>
+                            <p class="small text-muted mb-0">"Excellent insights on AI and content design."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-white text-main border-top">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
+                        <i class="fas fa-feather-pointed text-accent me-2"></i>
+                        <span class="text-accent">UX</span>Writer.
+                    </a>
+                    <p class="text-muted">Premium UX writing and content strategy for digital products that want to sound human.</p>
+                    <div class="d-flex gap-3 mt-4 justify-content-center justify-content-lg-start">
+                        <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon apple"><i class="fab fa-apple"></i></a>
+                        <a href="#" class="social-icon dribbble"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5 class="mb-4">Links</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="about.html" class="mb-2 d-block">About</a></li>
+                        <li><a href="portfolio.html" class="mb-2 d-block">Portfolio</a></li>
+                        <li><a href="blog.html" class="mb-2 d-block">Blog</a></li>
+                        <li><a href="contact.html" class="mb-2 d-block">Hire me</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5 class="mb-4">Services</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="#" class="mb-2 d-block">UX Writing</a></li>
+                        <li><a href="#" class="mb-2 d-block">Content Strategy</a></li>
+                        <li><a href="#" class="mb-2 d-block">UX Audits</a></li>
+                        <li><a href="#" class="mb-2 d-block">Microcopy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p class="text-muted">Get UX writing tips delivered to your inbox.</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Email address">
+                        <button class="btn btn-accent text-white" type="button">Join</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5 opacity-25">
+            <div class="d-flex justify-content-between align-items-center">
+                <p class="mb-0 text-muted small">&copy; 2026 UXWriter. All rights reserved.</p>
+                <a href="#" class="text-white"><i class="fas fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

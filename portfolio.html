@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | UX Writing Case Studies</title>
+    
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg fixed-top py-4 transition glass-nav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="fas fa-feather-pointed text-accent me-2"></i>
+                <span class="text-accent">UX</span>Writer.
+            </a>
+            
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <i class="fas fa-bars-staggered"></i>
+            </button>
+            
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header border-bottom">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="portfolio.html">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Hire me</a></li>
+                        <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="theme-toggle" title="Toggle Theme"><i class="fas fa-moon"></i></div>
+                        <div class="rtl-toggle px-3" title="Toggle RTL">
+                            <span class="small fw-bold">RTL</span>
+                        </div>
+                        <a href="login.html" class="btn-premium btn-premium-primary">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop');">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="hero-glass-box reveal text-center">
+                        <h1 class="hero-title">Selected <span class="text-accent">Case Studies</span></h1>
+                        <p class="lead mb-0">Showcasing the impact of strategic content design.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="py-100 bg-white">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Case Study 1 -->
+                <div class="col-lg-6 reveal">
+                    <div class="glass-card overflow-hidden h-100">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop" class="img-fluid w-100" style="aspect-ratio: 16/9; object-fit: cover;" alt="Fintech Case Study">
+                        <div class="p-5">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-accent-subtle text-accent">UX Writing</span>
+                                <span class="text-muted small">2023</span>
+                            </div>
+                            <h3>Simplifying Financial Freedom</h3>
+                            <p class="text-muted mb-4">How we redesigned the onboarding flow for a leading neobank, resulting in a 30% increase in account completions.</p>
+                            
+                            <div class="row g-3 mb-4">
+                                <div class="col-4">
+                                    <h6 class="mb-0">Problem</h6>
+                                    <p class="small text-muted">High drop-off</p>
+                                </div>
+                                <div class="col-4">
+                                    <h6 class="mb-0">Solution</h6>
+                                    <p class="small text-muted">Humanized copy</p>
+                                </div>
+                                <div class="col-4">
+                                    <h6 class="mb-0">Result</h6>
+                                    <p class="small text-muted">+30% Conversion</p>
+                                </div>
+                            </div>
+                            <a href="#" class="btn-premium btn-premium-outline">Read Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="col-lg-6 reveal" style="transition-delay: 0.1s;">
+                    <div class="glass-card overflow-hidden h-100">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop" class="img-fluid w-100" style="aspect-ratio: 16/9; object-fit: cover;" alt="SaaS Case Study">
+                        <div class="p-5">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-accent-subtle text-accent">Content Strategy</span>
+                                <span class="text-muted small">2024</span>
+                            </div>
+                            <h3>The Voice of Innovation</h3>
+                            <p class="text-muted mb-4">Developing a comprehensive voice and tone system for a global AI startup to ensure consistency across 12 product modules.</p>
+                            
+                            <div class="row g-3 mb-4">
+                                <div class="col-4">
+                                    <h6 class="mb-0">Problem</h6>
+                                    <p class="small text-muted">Inconsistent voice</p>
+                                </div>
+                                <div class="col-4">
+                                    <h6 class="mb-0">Solution</h6>
+                                    <p class="small text-muted">Tone System</p>
+                                </div>
+                                <div class="col-4">
+                                    <h6 class="mb-0">Result</h6>
+                                    <p class="small text-muted">100% Alignment</p>
+                                </div>
+                            </div>
+                            <a href="#" class="btn-premium btn-premium-outline">Read Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 3 -->
+                <div class="col-lg-6 reveal" style="transition-delay: 0.2s;">
+                    <div class="glass-card overflow-hidden h-100">
+                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19255a7a?q=80&w=1000&auto=format&fit=crop" class="img-fluid w-100" style="aspect-ratio: 16/9; object-fit: cover;" alt="Healthcare Case Study">
+                        <div class="p-5">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-accent-subtle text-accent">UX Audit</span>
+                                <span class="text-muted small">2023</span>
+                            </div>
+                            <h3>Empathy in Healthcare</h3>
+                            <p class="text-muted mb-4">A content-led audit of a patient portal that improved accessibility scores and patient satisfaction.</p>
+                            <a href="#" class="btn-premium btn-premium-outline">Read Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 4 -->
+                <div class="col-lg-6 reveal" style="transition-delay: 0.3s;">
+                    <div class="glass-card overflow-hidden h-100">
+                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1000&auto=format&fit=crop" class="img-fluid w-100" style="aspect-ratio: 16/9; object-fit: cover;" alt="E-commerce Case Study">
+                        <div class="p-5">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-accent-subtle text-accent">Microcopy</span>
+                                <span class="text-muted small">2024</span>
+                            </div>
+                            <h3>Checkout Without Friction</h3>
+                            <p class="text-muted mb-4">Reducing cart abandonment by 15% through precision microcopy and progressive disclosure techniques.</p>
+                            <a href="#" class="btn-premium btn-premium-outline">Read Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Case Study 5 -->
+                <div class="col-lg-6 reveal">
+                    <div class="glass-card overflow-hidden h-100">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1000&auto=format&fit=crop" class="img-fluid w-100" style="aspect-ratio: 16/9; object-fit: cover;" alt="B2B Case Study">
+                        <div class="p-5">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-accent-subtle text-accent">UX Strategy</span>
+                                <span class="text-muted small">2023</span>
+                            </div>
+                            <h3>Enterprise Search Reimagined</h3>
+                            <p class="text-muted mb-4">Refining complex search queries into simple, human-readable filters for a B2B data platform.</p>
+                            <a href="#" class="btn-premium btn-premium-outline">Read Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Case Study 6 -->
+                <div class="col-lg-6 reveal" style="transition-delay: 0.1s;">
+                    <div class="glass-card overflow-hidden h-100">
+                        <img src="https://images.unsplash.com/photo-1454165833767-027ffea9e51b?q=80&w=1000&auto=format&fit=crop" class="img-fluid w-100" style="aspect-ratio: 16/9; object-fit: cover;" alt="Education Case Study">
+                        <div class="p-5">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-accent-subtle text-accent">Localization</span>
+                                <span class="text-muted small">2024</span>
+                            </div>
+                            <h3>Learning Beyond Borders</h3>
+                            <p class="text-muted mb-4">Localizing an EdTech platform for 5 new markets, ensuring cultural nuances are preserved in the copy.</p>
+                            <a href="#" class="btn-premium btn-premium-outline">Read Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Case Study 7 -->
+                <div class="col-lg-6 reveal" style="transition-delay: 0.2s;">
+                    <div class="glass-card overflow-hidden h-100">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1000&auto=format&fit=crop" class="img-fluid w-100" style="aspect-ratio: 16/9; object-fit: cover;" alt="Social Media Case Study">
+                        <div class="p-5">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-accent-subtle text-accent">Microcopy</span>
+                                <span class="text-muted small">2023</span>
+                            </div>
+                            <h3>Connecting Communities</h3>
+                            <p class="text-muted mb-4">Redesigning the community guidelines and moderation messages to foster positive interaction.</p>
+                            <a href="#" class="btn-premium btn-premium-outline">Read Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Case Study 8 -->
+                <div class="col-lg-6 reveal" style="transition-delay: 0.3s;">
+                    <div class="glass-card overflow-hidden h-100">
+                        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1000&auto=format&fit=crop" class="img-fluid w-100" style="aspect-ratio: 16/9; object-fit: cover;" alt="Tech Case Study">
+                        <div class="p-5">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-accent-subtle text-accent">Content Design</span>
+                                <span class="text-muted small">2024</span>
+                            </div>
+                            <h3>The Developer Experience</h3>
+                            <p class="text-muted mb-4">Optimizing API documentation and developer portal copy for better clarity and adoption.</p>
+                            <a href="#" class="btn-premium btn-premium-outline">Read Case Study</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-white text-main border-top">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
+                        <i class="fas fa-feather-pointed text-accent me-2"></i>
+                        <span class="text-accent">UX</span>Writer.
+                    </a>
+                    <p class="text-muted">Premium UX writing and content strategy for digital products that want to sound human.</p>
+                    <div class="d-flex gap-3 mt-4 justify-content-center justify-content-lg-start">
+                        <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon apple"><i class="fab fa-apple"></i></a>
+                        <a href="#" class="social-icon dribbble"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5 class="mb-4">Links</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="about.html" class="mb-2 d-block">About</a></li>
+                        <li><a href="portfolio.html" class="mb-2 d-block">Portfolio</a></li>
+                        <li><a href="blog.html" class="mb-2 d-block">Blog</a></li>
+                        <li><a href="contact.html" class="mb-2 d-block">Hire me</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5 class="mb-4">Services</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="#" class="mb-2 d-block">UX Writing</a></li>
+                        <li><a href="#" class="mb-2 d-block">Content Strategy</a></li>
+                        <li><a href="#" class="mb-2 d-block">UX Audits</a></li>
+                        <li><a href="#" class="mb-2 d-block">Microcopy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p class="text-muted">Get UX writing tips delivered to your inbox.</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Email address">
+                        <button class="btn btn-accent text-white" type="button">Join</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5 opacity-25">
+            <div class="d-flex justify-content-between align-items-center">
+                <p class="mb-0 text-muted small">&copy; 2026 UXWriter. All rights reserved.</p>
+                <a href="#" class="btn-link-top"><i class="fas fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
