@@ -76,4 +76,27 @@ document.addEventListener('DOMContentLoaded', () => {
             form.classList.add('was-validated');
         }, false);
     });
+
+    // Back to Top Button
+    const backToTopBtn = document.createElement('button');
+    backToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    backToTopBtn.className = 'back-to-top';
+    backToTopBtn.setAttribute('title', 'Back to Top');
+    document.body.appendChild(backToTopBtn);
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 });
+
