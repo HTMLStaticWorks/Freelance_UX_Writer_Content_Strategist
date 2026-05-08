@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard | UXWriter Management</title>
-    
+
     <!-- Bootstrap 5 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -14,6 +15,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
 </head>
+
 <body class="bg-light">
 
     <div class="dashboard-wrapper">
@@ -26,7 +28,7 @@
                     <span class="badge bg-danger-subtle text-danger fs-6 ms-2">Admin</span>
                 </a>
             </div>
-            
+
             <ul class="nav flex-column gap-2 mb-auto">
                 <li class="nav-item">
                     <a class="nav-link active rounded-3 p-3 d-flex align-items-center" href="#admin-overview">
@@ -45,7 +47,8 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link rounded-3 p-3 d-flex align-items-center" href="#reviews">
-                        <i class="fas fa-check-double me-3"></i> Content Reviews <span class="badge bg-danger ms-auto">5</span>
+                        <i class="fas fa-check-double me-3"></i> Content Reviews <span
+                            class="badge bg-danger ms-auto">5</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -54,9 +57,9 @@
                     </a>
                 </li>
             </ul>
-            
+
             <hr class="my-4 opacity-10">
-            
+
             <ul class="nav flex-column gap-2 mb-4">
                 <li class="nav-item">
                     <a class="nav-link rounded-3 p-3 d-flex align-items-center" href="#admin-settings">
@@ -78,10 +81,12 @@
                     <button id="sidebarToggle" class="btn btn-light d-lg-none me-3"><i class="fas fa-bars"></i></button>
                 </div>
                 <div class="d-flex align-items-center gap-3">
-                    <div class="rtl-toggle px-3 py-1 border rounded-pill small fw-bold cursor-pointer bg-light">RTL</div>
+                    <div class="rtl-toggle px-3 py-1 border rounded-pill small fw-bold cursor-pointer bg-light">RTL
+                    </div>
                     <div class="theme-toggle cursor-pointer"><i class="fas fa-moon"></i></div>
                     <div class="profile-pic">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop" class="rounded-circle" width="40" height="40" alt="Profile">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop"
+                            class="rounded-circle" width="40" height="40" alt="Profile">
                     </div>
                 </div>
             </header>
@@ -91,7 +96,8 @@
                 <h2 class="fw-bold mb-2">Admin Dashboard</h2>
                 <p class="text-danger small fw-bold text-uppercase mb-4">System Administration</p>
                 <div class="d-flex justify-content-center">
-                    <div class="input-group shadow-sm rounded-pill overflow-hidden" style="width: 100%; max-width: 400px;">
+                    <div class="input-group shadow-sm rounded-pill overflow-hidden"
+                        style="width: 100%; max-width: 400px;">
                         <span class="input-group-text bg-white border-0"><i class="fas fa-search text-muted"></i></span>
                         <input type="text" class="form-control border-0" placeholder="Search system...">
                     </div>
@@ -135,7 +141,8 @@
                     <div class="p-4 border-bottom d-flex justify-content-between align-items-center bg-white">
                         <h5 class="mb-0 fw-bold">User Management</h5>
                         <div class="d-flex gap-2">
-                            <input type="text" class="form-control form-control-sm rounded-pill shadow-none px-3" placeholder="Search users...">
+                            <input type="text" class="form-control form-control-sm rounded-pill shadow-none px-3"
+                                placeholder="Search users...">
                             <button class="btn btn-accent btn-sm text-white rounded-pill px-3">Filter</button>
                         </div>
                     </div>
@@ -154,7 +161,8 @@
                                 <tr>
                                     <td class="ps-4">
                                         <div class="d-flex align-items-center gap-3">
-                                            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=50&auto=format&fit=crop" class="rounded-circle" alt="User">
+                                            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=50&auto=format&fit=crop"
+                                                class="rounded-circle" alt="User">
                                             <div>
                                                 <div class="fw-bold">Alex Johnson</div>
                                                 <div class="small text-muted">alex@company.com</div>
@@ -166,13 +174,15 @@
                                     <td><span class="badge bg-success-subtle text-success">Active</span></td>
                                     <td class="text-end pe-4">
                                         <button class="btn btn-light btn-sm"><i class="fas fa-edit"></i></button>
-                                        <button class="btn btn-light btn-sm text-danger"><i class="fas fa-trash"></i></button>
+                                        <button class="btn btn-light btn-sm text-danger"><i
+                                                class="fas fa-trash"></i></button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="ps-4">
                                         <div class="d-flex align-items-center gap-3">
-                                            <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=50&auto=format&fit=crop" class="rounded-circle" alt="User">
+                                            <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=50&auto=format&fit=crop"
+                                                class="rounded-circle" alt="User">
                                             <div>
                                                 <div class="fw-bold">Emily Davis</div>
                                                 <div class="small text-muted">emily@startup.io</div>
@@ -184,7 +194,8 @@
                                     <td><span class="badge bg-success-subtle text-success">Active</span></td>
                                     <td class="text-end pe-4">
                                         <button class="btn btn-light btn-sm"><i class="fas fa-edit"></i></button>
-                                        <button class="btn btn-light btn-sm text-danger"><i class="fas fa-trash"></i></button>
+                                        <button class="btn btn-light btn-sm text-danger"><i
+                                                class="fas fa-trash"></i></button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -203,9 +214,12 @@
                             <div class="p-4 border rounded-4 bg-light-subtle">
                                 <h6 class="fw-bold">Most Active Verticals</h6>
                                 <ul class="list-unstyled mt-3 mb-0">
-                                    <li class="d-flex justify-content-between mb-2"><span>SaaS</span> <span class="fw-bold text-accent">45%</span></li>
-                                    <li class="d-flex justify-content-between mb-2"><span>Fintech</span> <span class="fw-bold text-accent">30%</span></li>
-                                    <li class="d-flex justify-content-between"><span>E-commerce</span> <span class="fw-bold text-accent">25%</span></li>
+                                    <li class="d-flex justify-content-between mb-2"><span>SaaS</span> <span
+                                            class="fw-bold text-accent">45%</span></li>
+                                    <li class="d-flex justify-content-between mb-2"><span>Fintech</span> <span
+                                            class="fw-bold text-accent">30%</span></li>
+                                    <li class="d-flex justify-content-between"><span>E-commerce</span> <span
+                                            class="fw-bold text-accent">25%</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -218,7 +232,8 @@
                 <div class="stat-card">
                     <h5 class="mb-4 fw-bold">Pending Content Reviews</h5>
                     <div class="list-group list-group-flush">
-                        <div class="list-group-item bg-transparent d-flex justify-content-between align-items-center py-3 px-0 border-bottom">
+                        <div
+                            class="list-group-item bg-transparent d-flex justify-content-between align-items-center py-3 px-0 border-bottom">
                             <div>
                                 <h6 class="mb-0 fw-bold">Onboarding Flow Refresh</h6>
                                 <span class="small text-muted">Submitted by Sarah Jenkins • 2 hours ago</span>
@@ -232,7 +247,8 @@
             <!-- Analytics Section -->
             <div id="analytics" class="dashboard-section d-none">
                 <div class="stat-card p-5 text-center">
-                    <div class="bg-primary-subtle p-4 rounded-circle d-inline-flex mb-4" style="width: 100px; height: 100px; align-items: center; justify-content: center;">
+                    <div class="bg-primary-subtle p-4 rounded-circle d-inline-flex mb-4"
+                        style="width: 100px; height: 100px; align-items: center; justify-content: center;">
                         <i class="fas fa-chart-bar fa-3x text-primary"></i>
                     </div>
                     <h3 class="fw-bold">Platform Analytics</h3>
@@ -248,7 +264,8 @@
                         <label class="form-label small fw-bold text-muted">Maintenance Mode</label>
                         <div class="form-check form-switch">
                             <input class="form-check-input shadow-none" type="checkbox" id="maintSwitch">
-                            <label class="form-check-label small" for="maintSwitch">Enable Maintenance Mode (Restricts user access)</label>
+                            <label class="form-check-label small" for="maintSwitch">Enable Maintenance Mode (Restricts
+                                user access)</label>
                         </div>
                     </div>
                     <button class="btn btn-danger rounded-pill px-4">Update System</button>
@@ -263,15 +280,5 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/dashboard.js"></script>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
