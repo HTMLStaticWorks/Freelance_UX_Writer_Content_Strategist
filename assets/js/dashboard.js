@@ -52,6 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (pageHeading && headings[id]) {
             pageHeading.textContent = headings[id];
         }
+
+        // Scroll main-content scrollable container to the top
+        if (mainContent) {
+            mainContent.scrollTop = 0;
+        }
     };
 
 

@@ -1910,3 +1910,26 @@ p .fw-bold,
         margin-right: 0 !important;
     }
 }
+
+/* --- RTL Footer Alignment Overrides --- */
+[dir="rtl"] footer {
+    text-align: right !important;
+}
+
+[dir="rtl"] footer h5,
+[dir="rtl"] footer ul,
+[dir="rtl"] footer li,
+[dir="rtl"] footer a,
+[dir="rtl"] footer p,
+[dir="rtl"] footer .navbar-brand {
+    text-align: right !important;
+}
+
+[dir="rtl"] .list-unstyled {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+[dir="rtl"] footer .d-flex.gap-3.justify-content-start {
+    justify-content: flex-start !important;
+}
