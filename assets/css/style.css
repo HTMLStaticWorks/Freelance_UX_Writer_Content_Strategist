@@ -57,13 +57,13 @@
 [data-theme="dark"] {
     --primary: #14B8A6;
     /* Bright Teal for accents in dark mode */
-    --secondary: #020617;
-    /* Very Dark Slate background */
+    --secondary: #000000;
+    /* Pure Black background */
     --text-main: #F1F5F9;
     --text-muted: #94A3B8;
-    --glass-bg: rgba(15, 23, 42, 0.85);
+    --glass-bg: rgba(18, 18, 18, 0.85);
     --glass-border: rgba(255, 255, 255, 0.08);
-    --card-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+    --card-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8);
 }
 
 [data-theme="dark"] .navbar-toggler i {
@@ -103,7 +103,7 @@
 }
 
 [data-theme="dark"] .form-select option {
-    background-color: #020617 !important;
+    background-color: #121212 !important;
     color: var(--text-main) !important;
 }
 
@@ -172,20 +172,23 @@
 
 
 [data-theme="dark"] .bg-primary {
-    background-color: #111827 !important;
-    /* Keep primary sections dark in dark mode */
+    background: #121212 !important; /* Premium Dark Grey in dark mode */
     color: var(--text-main) !important;
 }
 
-[data-theme="dark"] .bg-white,
+[data-theme="dark"] .bg-white {
+    background-color: #121212 !important; /* Premium Dark Grey for alternate sections */
+    color: var(--text-main) !important;
+}
+
 [data-theme="dark"] .bg-light {
-    background-color: var(--secondary) !important;
+    background-color: #000000 !important; /* Pure Black background */
     color: var(--text-main) !important;
 }
 
 [data-theme="dark"] .glass-card {
-    background: rgba(15, 23, 42, 0.6);
-    border-color: rgba(255, 255, 255, 0.1);
+    background: rgba(18, 18, 18, 0.6);
+    border-color: rgba(255, 255, 255, 0.08);
 }
 
 [data-theme="dark"] h1,
@@ -202,11 +205,15 @@
 }
 
 [data-theme="dark"] .card {
-    background-color: rgba(30, 41, 59, 0.4);
-    border-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(18, 18, 18, 0.4);
+    border-color: rgba(255, 255, 255, 0.08);
 }
 
 /* Base Styles */
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--secondary);
@@ -222,7 +229,7 @@ h4,
 h5,
 h6 {
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 a {
@@ -248,7 +255,7 @@ a {
 }
 
 [data-theme="dark"] .navbar {
-    background: rgba(15, 23, 42, 0.95) !important;
+    background: rgba(0, 0, 0, 0.95) !important;
 }
 
 [data-theme="dark"] .hover-up:hover {
@@ -259,16 +266,16 @@ a {
 [data-theme="dark"] .dashboard-table,
 [data-theme="dark"] .dashboard-table .bg-white,
 [data-theme="dark"] .stat-card {
-    background-color: #1e293b !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    background-color: #121212 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
     color: var(--text-main) !important;
 }
 
 [data-theme="dark"] .table {
-    --bs-table-bg: #1e293b !important;
+    --bs-table-bg: #121212 !important;
     --bs-table-color: var(--text-main) !important;
-    --bs-table-border-color: rgba(255, 255, 255, 0.1) !important;
-    background-color: #1e293b !important;
+    --bs-table-border-color: rgba(255, 255, 255, 0.08) !important;
+    background-color: #121212 !important;
     color: var(--text-main) !important;
 }
 
@@ -278,15 +285,15 @@ a {
 }
 
 [data-theme="dark"] .table-hover tbody tr:hover {
-    --bs-table-accent-bg: rgba(255, 255, 255, 0.05) !important;
+    --bs-table-accent-bg: rgba(255, 255, 255, 0.03) !important;
 }
 
 [data-theme="dark"] .dashboard-table thead,
 [data-theme="dark"] .dashboard-table thead tr,
 [data-theme="dark"] .dashboard-table thead th {
-    background-color: #0f172a !important;
+    background-color: #000000 !important;
     color: #94a3b8 !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
 [data-theme="dark"] .table .text-muted,
@@ -311,13 +318,13 @@ a {
 
 
 [data-theme="dark"] .btn-white {
-    background-color: #1e293b !important;
+    background-color: #121212 !important;
     color: var(--text-main) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
 [data-theme="dark"] .btn-white:hover {
-    background-color: #334155 !important;
+    background-color: #1c1c1e !important;
 }
 
 [data-theme="dark"] .btn-white i {
@@ -336,8 +343,8 @@ a {
 
 
 [data-theme="dark"] .btn-light {
-    background-color: #1e293b !important;
-    border-color: rgba(255, 255, 255, 0.1) !important;
+    background-color: #121212 !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
     color: white !important;
 }
 
@@ -346,8 +353,8 @@ a {
 }
 
 [data-theme="dark"] .dropdown-menu {
-    background-color: #1e293b !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    background-color: #121212 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
 [data-theme="dark"] .dropdown-item {
@@ -696,9 +703,47 @@ a {
 }
 
 @media (max-width: 360px) {
+    /* Offcanvas full-width on 360px */
     .offcanvas-end {
         width: 100% !important;
         max-width: 100%;
+    }
+
+    /* Prevent brand + hamburger from being clipped/hidden during scroll on 360px.
+       Tighten container padding so all flex children fit within the 360px viewport. */
+    .navbar .container,
+    .navbar .container-fluid {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        flex-wrap: nowrap !important;
+    }
+
+    /* Lock brand and toggler so they never shrink away */
+    .navbar .navbar-brand {
+        flex-shrink: 0 !important;
+        font-size: 1.15rem !important;
+        letter-spacing: -0.5px !important;
+        white-space: nowrap !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .navbar .navbar-toggler {
+        flex-shrink: 0 !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        display: flex !important;
+    }
+
+    /* Reduce navbar vertical padding on scroll so it doesn't collapse height */
+    .navbar.py-2 {
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+    }
+
+    /* Ensure navbar min-height is always sufficient */
+    .navbar {
+        min-height: 56px !important;
     }
 }
 
@@ -721,12 +766,29 @@ a {
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .nav-link {
-        margin: 0 6px;
-        font-size: 0.85rem;
+        margin: 0 4px !important;
+        font-size: 0.82rem !important;
     }
 
     .navbar .gap-3 {
-        gap: 0.5rem !important;
+        gap: 0.4rem !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar .btn-premium,
+    .navbar .theme-toggle,
+    .navbar .rtl-toggle {
+        height: 44px !important;
+    }
+
+    .navbar .theme-toggle {
+        width: 44px !important;
+    }
+
+    .navbar .btn-premium {
+        padding: 0 20px !important;
+        font-size: 0.9rem !important;
     }
 }
 
@@ -957,7 +1019,7 @@ a {
 }
 
 [data-theme="dark"] .dashboard-wrapper {
-    background-color: #020617;
+    background-color: #000000 !important;
 }
 
 .sidebar {
@@ -1323,7 +1385,8 @@ footer a:hover {
 
 
 [data-theme="dark"] footer {
-    background-color: #0F172A !important;
+    background-color: #121212 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
 
@@ -1571,5 +1634,175 @@ footer a:hover {
     
     footer .text-center {
         text-align: left !important;
+    }
+}
+
+/* ==========================================================================
+   Typography Hierarchy & Dark Mode Polish overrides
+   Enforcing below 600 for headings, 400-550 for paragraphs/subheadings
+   ========================================================================== */
+
+/* Headings font weights strictly below 600 */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.hero-title, .section-title,
+[class*="display-"],
+.dashboard-header h3,
+.dashboard-header h5,
+.dashboard-header h6,
+.sidebar .h4,
+.fw-800:is(h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .hero-title, .section-title, [class*="display-"]),
+.fw-bold:is(h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .hero-title, .section-title, [class*="display-"]) {
+    font-weight: 500 !important;
+}
+
+/* Paragraphs, subheadings, and captions kept between 400 and 550 */
+p, 
+.lead, 
+.text-muted,
+.subheading,
+.author-info span,
+.testimonial-author span,
+.small,
+.badge,
+span:not(.text-accent):not(.navbar-brand span) {
+    font-weight: 400;
+}
+
+/* Strictly enforce 500/550 limits for specific components */
+p.fw-bold,
+p .fw-bold,
+.lead.fw-bold,
+.text-muted.fw-bold,
+.small.fw-bold,
+.author-info .fw-bold,
+.testimonial-author .fw-bold,
+.subheading.fw-bold,
+.nav-link,
+.btn-premium,
+.sidebar .nav-link,
+.file-upload-label,
+.rtl-toggle {
+    font-weight: 500 !important;
+}
+
+.dashboard-table th {
+    font-weight: 550 !important;
+}
+
+/* Dark mode border highlights to avoid raw light lines in pure black theme */
+[data-theme="dark"] .border,
+[data-theme="dark"] .border-bottom,
+[data-theme="dark"] .border-top,
+[data-theme="dark"] .border-start,
+[data-theme="dark"] .border-end {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Voice & Tone brand tag interactive animations */
+.voice-pillar-tag {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.voice-pillar-tag:hover {
+    background-color: var(--accent) !important;
+    color: white !important;
+    border-color: var(--accent) !important;
+    transform: translateY(-2px) scale(1.05) !important;
+    box-shadow: 0 4px 10px rgba(var(--accent-rgb), 0.3) !important;
+}
+
+/* --- COMPLETE PREMIUM RTL SYSTEM OVERRIDES --- */
+[dir="rtl"] {
+    text-align: right !important;
+}
+
+[dir="rtl"] .text-start {
+    text-align: right !important;
+}
+
+[dir="rtl"] .text-end {
+    text-align: left !important;
+}
+
+[dir="rtl"] .text-center {
+    text-align: center !important;
+}
+
+/* Absolute positioning direction flip */
+[dir="rtl"] .position-absolute.top-0.end-0 {
+    left: 0 !important;
+    right: auto !important;
+}
+
+/* Password eye icon alignment in RTL */
+[dir="rtl"] .password-toggle.end-0 {
+    left: 0 !important;
+    right: auto !important;
+    margin-left: 1rem !important;
+    margin-right: 0 !important;
+}
+
+[dir="rtl"] .position-relative .form-control.pe-5 {
+    padding-left: 3rem !important;
+    padding-right: 1rem !important;
+}
+
+/* Arrow icon direction mirror in RTL */
+[dir="rtl"] .fa-arrow-right {
+    transform: scaleX(-1) !important;
+    display: inline-block !important;
+}
+
+/* RTL margin shifts to override LTR direction assumptions */
+[dir="rtl"] .me-1 { margin-left: 0.25rem !important; margin-right: 0 !important; }
+[dir="rtl"] .me-2 { margin-left: 0.5rem !important; margin-right: 0 !important; }
+[dir="rtl"] .me-3 { margin-left: 1rem !important; margin-right: 0 !important; }
+[dir="rtl"] .me-4 { margin-left: 1.5rem !important; margin-right: 0 !important; }
+[dir="rtl"] .me-5 { margin-left: 3rem !important; margin-right: 0 !important; }
+
+[dir="rtl"] .ms-1 { margin-right: 0.25rem !important; margin-left: 0 !important; }
+[dir="rtl"] .ms-2 { margin-right: 0.5rem !important; margin-left: 0 !important; }
+[dir="rtl"] .ms-3 { margin-right: 1rem !important; margin-left: 0 !important; }
+[dir="rtl"] .ms-4 { margin-right: 1.5rem !important; margin-left: 0 !important; }
+[dir="rtl"] .ms-5 { margin-right: 3rem !important; margin-left: 0 !important; }
+
+[dir="rtl"] .ms-auto { margin-right: auto !important; margin-left: 0 !important; }
+[dir="rtl"] .me-auto { margin-left: auto !important; margin-right: 0 !important; }
+
+/* Navbar RTL alignment specific fixes */
+[dir="rtl"] .navbar-brand {
+    margin-right: 0 !important;
+    margin-left: 1.5rem !important;
+}
+
+[dir="rtl"] .navbar .offcanvas-body {
+    padding-left: 1.5rem !important;
+    padding-right: 0 !important;
+}
+
+/* Dashboard RTL Layout adjustments */
+[dir="rtl"] .sidebar {
+    left: auto !important;
+    right: 0 !important;
+    border-right: none !important;
+    border-left: 1px solid var(--glass-border) !important;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.02) !important;
+}
+
+[dir="rtl"] .main-content {
+    margin-left: 0 !important;
+    margin-right: var(--sidebar-width) !important;
+}
+
+@media (max-width: 991.98px) {
+    [dir="rtl"] .sidebar {
+        transform: translateX(100%) !important;
+    }
+    [dir="rtl"] .sidebar.active {
+        transform: translateX(0) !important;
+    }
+    [dir="rtl"] .main-content {
+        margin-right: 0 !important;
     }
 }
