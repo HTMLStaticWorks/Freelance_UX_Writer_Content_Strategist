@@ -172,17 +172,20 @@
 
 
 [data-theme="dark"] .bg-primary {
-    background: #121212 !important; /* Premium Dark Grey in dark mode */
+    background: #121212 !important;
+    /* Premium Dark Grey in dark mode */
     color: var(--text-main) !important;
 }
 
 [data-theme="dark"] .bg-white {
-    background-color: #121212 !important; /* Premium Dark Grey for alternate sections */
+    background-color: #121212 !important;
+    /* Premium Dark Grey for alternate sections */
     color: var(--text-main) !important;
 }
 
 [data-theme="dark"] .bg-light {
-    background-color: #000000 !important; /* Pure Black background */
+    background-color: #000000 !important;
+    /* Pure Black background */
     color: var(--text-main) !important;
 }
 
@@ -703,6 +706,7 @@ a {
 }
 
 @media (max-width: 360px) {
+
     /* Offcanvas full-width on 360px */
     .offcanvas-end {
         width: 100% !important;
@@ -776,6 +780,7 @@ a {
 }
 
 @media (min-width: 992px) {
+
     .navbar .btn-premium,
     .navbar .theme-toggle,
     .navbar .rtl-toggle {
@@ -1014,7 +1019,8 @@ a {
 /* Dashboard Layout */
 .dashboard-wrapper {
     display: flex;
-    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
     background-color: #f1f5f9;
 }
 
@@ -1075,16 +1081,18 @@ a {
 .main-content {
     margin-left: var(--sidebar-width);
     flex: 1;
-    padding: 40px;
+    padding: 0 40px 40px 40px;
     transition: var(--transition);
     min-width: 0;
     /* Fix flex overflow */
+    height: 100vh;
+    overflow-y: auto;
 }
 
 .dashboard-header {
     background: white;
     padding: 15px 40px;
-    margin: -40px -40px 40px;
+    margin: 0 -40px 40px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     display: flex;
     justify-content: space-between;
@@ -1094,6 +1102,14 @@ a {
     z-index: 1000;
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.9);
+}
+
+.dashboard-header .input-group {
+    border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+[data-theme="dark"] .dashboard-header .input-group {
+    border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 [data-theme="dark"] .dashboard-header {
@@ -1302,12 +1318,31 @@ a {
 
     .main-content {
         margin-left: 0;
-        padding: 20px;
+        padding: 0 20px 20px 20px;
+        height: 100vh;
+        overflow-y: auto;
     }
 
     .dashboard-header {
-        margin: -20px -20px 20px;
+        margin: 0 -20px 20px;
         padding: 15px 20px;
+    }
+
+    .dashboard-header .rtl-toggle {
+        height: 32px !important;
+        padding: 0 12px !important;
+        font-size: 0.75rem !important;
+        min-width: 50px !important;
+    }
+
+    .dashboard-header .theme-toggle {
+        height: 32px !important;
+        width: 32px !important;
+    }
+
+    .dashboard-header .profile-pic img {
+        width: 32px !important;
+        height: 32px !important;
     }
 
     /* Mobile Sidebar Backdrop */
@@ -1541,7 +1576,7 @@ footer a:hover {
 
 /* Premium CTA Card (Home 2 Screenshot Style) */
 .cta-premium-card {
-    background: var(--glass-bg) !important; 
+    background: var(--glass-bg) !important;
     backdrop-filter: blur(10px);
     border: 1px solid var(--glass-border);
     border: 1px solid var(--glass-border);
@@ -1560,12 +1595,12 @@ footer a:hover {
     .cta-premium-card {
         padding: 40px 24px !important;
     }
-    
+
     .cta-premium-card h2 {
         font-size: 1.8rem !important;
         line-height: 1.3;
     }
-    
+
     .cta-image-premium {
         max-width: 100%;
     }
@@ -1577,17 +1612,17 @@ footer a:hover {
         width: 25% !important;
         flex: 0 0 25% !important;
     }
-    
+
     .quick-actions-row .btn-white {
         padding: 10px 4px !important;
         gap: 4px !important;
     }
-    
+
     .quick-actions-row .btn-white span {
         white-space: nowrap !important;
         font-size: 0.65rem !important;
     }
-    
+
     .quick-actions-row .btn-white i {
         font-size: 0.85rem !important;
     }
@@ -1598,13 +1633,13 @@ footer a:hover {
     footer {
         text-align: left !important;
     }
-    
+
     footer .container {
         text-align: left !important;
         padding-left: 20px !important;
         padding-right: 20px !important;
     }
-    
+
     footer [class*="col-"] {
         width: 100% !important;
         flex: 0 0 100% !important;
@@ -1612,26 +1647,26 @@ footer a:hover {
         text-align: left !important;
         margin-bottom: 30px !important;
     }
-    
+
     footer .d-flex {
         justify-content: flex-start !important;
         align-items: flex-start !important;
     }
-    
+
     footer .navbar-brand {
         justify-content: flex-start !important;
         margin-left: 0 !important;
     }
-    
+
     footer .social-icon {
         margin-left: 0 !important;
     }
-    
+
     footer .justify-content-center,
     footer .justify-content-between {
         justify-content: flex-start !important;
     }
-    
+
     footer .text-center {
         text-align: left !important;
     }
@@ -1643,9 +1678,20 @@ footer a:hover {
    ========================================================================== */
 
 /* Headings font weights strictly below 600 */
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6,
-.hero-title, .section-title,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.hero-title,
+.section-title,
 [class*="display-"],
 .dashboard-header h3,
 .dashboard-header h5,
@@ -1657,16 +1703,27 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* Paragraphs, subheadings, and captions kept between 400 and 550 */
-p, 
-.lead, 
+p,
+.lead,
 .text-muted,
 .subheading,
 .author-info span,
 .testimonial-author span,
 .small,
 .badge,
-span:not(.text-accent):not(.navbar-brand span) {
+span:not(.text-accent):not(.navbar-brand span):not(.input-group-text) {
     font-weight: 400;
+}
+
+/* Ensure Font Awesome icons always maintain their correct weights */
+.fas, .fa-solid {
+    font-weight: 900 !important;
+}
+.far, .fa-regular {
+    font-weight: 400 !important;
+}
+.fab, .fa-brands {
+    font-weight: 400 !important;
 }
 
 /* Strictly enforce 500/550 limits for specific components */
@@ -1755,20 +1812,65 @@ p .fw-bold,
 }
 
 /* RTL margin shifts to override LTR direction assumptions */
-[dir="rtl"] .me-1 { margin-left: 0.25rem !important; margin-right: 0 !important; }
-[dir="rtl"] .me-2 { margin-left: 0.5rem !important; margin-right: 0 !important; }
-[dir="rtl"] .me-3 { margin-left: 1rem !important; margin-right: 0 !important; }
-[dir="rtl"] .me-4 { margin-left: 1.5rem !important; margin-right: 0 !important; }
-[dir="rtl"] .me-5 { margin-left: 3rem !important; margin-right: 0 !important; }
+[dir="rtl"] .me-1 {
+    margin-left: 0.25rem !important;
+    margin-right: 0 !important;
+}
 
-[dir="rtl"] .ms-1 { margin-right: 0.25rem !important; margin-left: 0 !important; }
-[dir="rtl"] .ms-2 { margin-right: 0.5rem !important; margin-left: 0 !important; }
-[dir="rtl"] .ms-3 { margin-right: 1rem !important; margin-left: 0 !important; }
-[dir="rtl"] .ms-4 { margin-right: 1.5rem !important; margin-left: 0 !important; }
-[dir="rtl"] .ms-5 { margin-right: 3rem !important; margin-left: 0 !important; }
+[dir="rtl"] .me-2 {
+    margin-left: 0.5rem !important;
+    margin-right: 0 !important;
+}
 
-[dir="rtl"] .ms-auto { margin-right: auto !important; margin-left: 0 !important; }
-[dir="rtl"] .me-auto { margin-left: auto !important; margin-right: 0 !important; }
+[dir="rtl"] .me-3 {
+    margin-left: 1rem !important;
+    margin-right: 0 !important;
+}
+
+[dir="rtl"] .me-4 {
+    margin-left: 1.5rem !important;
+    margin-right: 0 !important;
+}
+
+[dir="rtl"] .me-5 {
+    margin-left: 3rem !important;
+    margin-right: 0 !important;
+}
+
+[dir="rtl"] .ms-1 {
+    margin-right: 0.25rem !important;
+    margin-left: 0 !important;
+}
+
+[dir="rtl"] .ms-2 {
+    margin-right: 0.5rem !important;
+    margin-left: 0 !important;
+}
+
+[dir="rtl"] .ms-3 {
+    margin-right: 1rem !important;
+    margin-left: 0 !important;
+}
+
+[dir="rtl"] .ms-4 {
+    margin-right: 1.5rem !important;
+    margin-left: 0 !important;
+}
+
+[dir="rtl"] .ms-5 {
+    margin-right: 3rem !important;
+    margin-left: 0 !important;
+}
+
+[dir="rtl"] .ms-auto {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+
+[dir="rtl"] .me-auto {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
 
 /* Navbar RTL alignment specific fixes */
 [dir="rtl"] .navbar-brand {
@@ -1799,9 +1901,11 @@ p .fw-bold,
     [dir="rtl"] .sidebar {
         transform: translateX(100%) !important;
     }
+
     [dir="rtl"] .sidebar.active {
         transform: translateX(0) !important;
     }
+
     [dir="rtl"] .main-content {
         margin-right: 0 !important;
     }
